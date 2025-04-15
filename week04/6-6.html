@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문하기</title>
+</head>
+<body>
+    <h1>레드향 주문하기</h1>
+    <form>
+        <fieldset>
+            <legend>배송 정보</legend>
+            <ul>
+            <li>이름<input type="name"></br></li>
+            <li>배송 주소<input type="address"></br></li>
+            <li>이메일<input type="email"></br></li>
+            <li>연락처<input type="number"></br></li>
+            <li>배송 지정<input type="date">(주문일부터 최소 3일 이후)</br></li>
+            <li>메모</li>
+                <textarea type="memo"></textarea>
+            </ul>
+        </fieldset>
+    </br>
+        <fieldset>
+            <legend>상품 선택</legend>
+            <p><b>주문할 상품을 선택해 주세요.</b></p>
+            <select name="" id="">
+                <option value="">레드향 특</option> 
+                <option value="">레드향 상</option> 
+                <option value="">레드향 중</option> 
+                <option value="">레드향 소</option> 
+           </select>
+            <ul>
+                <li><lable><input type ="checkbox"> 선물용 3kg<input type="">개 (최대 5개)<lable></li>
+                <li><lable><input type ="checkbox"> 선물용 5kg<input type="">개 (최대 3개)<lable></li>
+             </ul>
+        </fieldset>
+    </br>
+        <button>주문하기</button>
+        <button>취소하기</button>
+</body>
+</html>
