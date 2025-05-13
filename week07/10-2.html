@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+          width: 400px;
+					height:250px;
+					padding: 20px;
+					border:20px solid rgba(100, 100, 100, 0.493);
+					margin-bottom:20px;
+					overflow: auto;
+					background-image: url("https://cdn.pixabay.com/photo/2012/04/05/01/40/balloons-25737_1280.png");
+					background-repeat: no-repeat;
+					background-position:right top;
+				}
+			  #bg1{
+					background-origin:padding-box;
+				}
+		    #bg2{
+					background-origin:border-box;
+				}
+			  #bg3{
+					background-origin:content-box;
+				}
+    </style>
+</head>
+<body>
+     <div id="bg1">
+			 <h2>background-origin</h2>
+			 <h3>패딩까지 배경 이미지 표시</h3>
+			 <p>background-origin: padding-box</p>
+		 </div>
+	   <div id="bg2">
+			 <h2>background-origin</h2>
+			 <h3>테두리까지 배경 이미지 표시</h3>
+			 <p>background-origin:border-box<p>
+		 </div>
+	   <div id="bg3">
+			 <h2>background-origin</h2>
+			 <h3>내용영역에만 배경 이미지 표시</h3>
+			 <p>background-origin: content-box</p>
+		 </div>
+    
+</body>
+</html>

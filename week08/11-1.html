@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 위치 속성</title>
+  <style>
+    
+	p{
+        width:400px;
+        height:200px;
+        font-size: 50x;
+    }
+    b{
+        color:blue;
+        font-size: 30px;
+    }
+    #contents{
+        position: relative;
+        background-image:url('./bg.jpg') no-repeat ;
+        background-size: cover;
+        width:800px;
+        height: 500px;
+        margin: 50px auto;
+    }
+    
+    #pos1{
+        position: absolute;
+        background-color: aquamarine;
+        left:50px;
+        top:50px;
+    }
+    #pos2{
+        position: absolute;
+        background-color: bisque;
+        right:100px;
+        top:100px;
+    }
+    #pos3{
+        position: absolute;
+        background-color: pink;
+        left:100px;
+        bottom:100px;
+    }
+
+    h1{
+        color:#fff;
+        font-size:120px;
+        text-shadow: 2px 3px 0 #00f;
+        position: absolute;
+        right:10px;
+        bottom:10px;
+    }
+  </style>
+</head>
+<body>  
+  <div id="container">
+  <div id="contents">
+    <h1>CSS3</h1>
+  </div>
+     <p id="pos1"><b>pos1</b>et adipisicing voluptate aliqua cupidatat nulla.
+        Laboris est sint sit aliqua enim. Aute Lorem eu sint aute sunt proident.
+         Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. 
+         Irure exercitation tempor aliqua laboris cupidatat anim in non officia
+          aliquip excepteur fugiat labore.</p>
+
+     <p id="pos2"><b>pos2</b>Lorem ipsum reprehenderit adipisicing exercitation 
+        enim velit veniam incididunt sit consectetur elit exercitation. Commodo veniam
+         sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem qui.
+          Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute
+           Lorem nulla et. Sint commodo aute amet laboris ullamco exercitation Lorem dolore ven
+           iam ut reprehenderit incididunt. Laborum nulla eiusmod cillum irure anim aute.</p>
+   
+    <p id="pos3"><b>pos3</b>Excepteur voluptate ad irure ipsum duis. Deserunt
+        cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt 
+        adipisicing enim laboris voluptate.</p>
+  </div>
+  </body>
+</html>

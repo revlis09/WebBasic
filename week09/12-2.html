@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>가상 선택자</title>
+  <style>
+    .container {
+      width: 960px;
+      margin: 0 auto;
+      /* [문1] 마진을 위아래 0 좌우는 auto로 설정하여 가운데 정렬*/
+    }
+
+    .navi {
+      width: 960px;
+      height: 60px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .navi ul {
+      list-style: none;
+      /* [문2] 리스트의 불릿문자를 제거*/
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+
+    .navi ul li {
+      /* [문3] navi클래스의 ul 의 하위요소 li 선택*/
+      display: inline-block;
+      /*[문4]블록요소인 li요소에 인라인 속성을 추가하여 옆으로 배열  */
+      width: 150px;
+      padding: 10px;
+    }
+
+    .navi a:link,
+    a:visited {
+      /*[문5].navi의 a 요소에 링크와 방문한 요소 스타일 지정  */
+      font-size: 14px;
+      padding: 10px;
+      text-decoration: none;
+      /*[문6] 텍스트장식 밑줄 없음 */
+
+    }
+
+    .navi a:hover,
+    a:focus {
+      /*[문7] .navi의 a에 마우스 올렸을때와 초점이 갔을때  스타일 지정 */
+      background-color: darkgray;
+      /* 배경색 */
+      color: white;
+      /* 글자색 */
+    }
+
+    .navi a:active {
+      /*[ 문8].navi의 a를 클릭했을때 스타일 지정 */
+      background-color: red;
+      /* 배경색 */
+    }
+
+    .contents {
+      margin: 30px auto;
+      width: 400px;
+      padding: 20px;
+      border: 1px solid darkgray;
+      border-radius: 5px;
+    }
+
+    #intro:target {
+      /*#intro의 이동대상에 스타일 지정*/
+      background-color: blue;
+      /* 배경색 - 파란색 */
+      color: #fff;
+      /* 글자색 - 흰색 */
+    }
+
+    #room:target {
+      /*[문9]#room의 이동대상에 스타일 지정 */
+      background-color: orange;
+      /* 배경색 - 주황색 */
+    }
+
+    #reservation:target {
+      /*[문10]#reservation의 이동대상에 스타일 지정 */
+      background-color: beige;
+      /* 배경색 - 베이지색 */
+    }
+
+    li a[href="ps-2.html"]::after {
+      /*예약하기 new표시 */
+      content: "NEW!!";
+      font-size: x-small;
+      padding: 2px, 4px;
+      margin: 0 10px;
+      background: red;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+    <div class="container">
+      <nav class="navi">
+        <ul>
+          <li><a href="#intro">이용안내</a></li>
+          <li><a href="#room">객실 소개</a></li>
+          <li><a href="#reservation">예약 방법 및 요금</a></li>
+          <li><a href="#ps-2.html">예약하기</a></li>
+        </ul>
+      </nav>
+      <div id="intro" class="contents">
+        <h2>이용 안내</h2>
+        <p>Excepteur do est eiusmod nulla et veniam. Labore officia officia ex aliqua exercitation aliqua laborum Lorem
+          deserunt ut ullamco labore anim. Officia eu duis aliquip incididunt. Do laborum et consequat aliqua sint
+          consectetur.</p>
+      </div>
+      <div id="room" class="contents">
+        <h2>객실소개</h2>
+        <p>Qui magna culpa minim reprehenderit magna in nisi ipsum. Ad cillum tempor minim fugiat est dolor. Cillum sit
+          qui
+          minim sint officia nostrud cillum cupidatat pariatur ipsum eiusmod velit labore. Sit in non fugiat minim sit.
+        </p>
+      </div>
+      <div id="reservation" class="contents">
+        <h2>예약 방법 및 요금</h2>
+        <p>Fugiat aliquip mollit proident velit magna esse ea officia eu. Esse do aliqua proident culpa eiusmod duis
+          minim
+          deserunt eu reprehenderit ut tempor.</p>
+      </div>
+    </div>
+  </body>
+
+</html>
