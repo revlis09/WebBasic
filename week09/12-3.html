@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>세로로 중앙에 배치</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #content {
+      height: 100vh;
+      background: url('./images/bg0.jpg');
+      background-size: cover;
+      display: flex;
+    }
+
+    button {
+      margin-right: 20px;
+    }
+  </style>
+
+  <head>
+    <!--이부분에 답안 작성-->
+
+  <body id="content">
+    <button onclick="justifyContent()">주축 가운데 정렬!</button>
+    <button onclick="alignItems()">교차측 가운데 정렬!</button>
+    <script>
+      let contentEl = document.getElementById("content");
+
+      function justifyContent() {
+        contentEl.style.justifyContent = "center";
+      }
+      function alignItems() {
+        contentEl.style.alignItems = "center";
+      }
+
+    </script>
+
+  </body>
+
+</html>

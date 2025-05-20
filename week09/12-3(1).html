@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: nowrap;
+      background-color: DodgerBlue;
+      flex-direction: column;
+    }
+
+    .flex-container>div {
+      background-color: #f1f1f1;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Flexible Boxes</h1>
+
+  <div class="flex-container">
+    <div>menu1</div>
+    <div>menu2</div>
+    <div>menu3</div>
+    <div>menu4</div>
+    <div>menu5</div>
+    <div>menu6</div>
+    <div>menu7</div>
+    <div>menu8</div>
+  </div>
+
+  <p>브라우저 크기를 리사이즈 해보세요.</p>
+  <p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+
+
+</body>
+
+</html>

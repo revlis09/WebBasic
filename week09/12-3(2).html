@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 650px;
+      height: 150px;
+      background-color: #eee;
+      border: 1px solid #222;
+      margin-bottom: 20px;
+      display: flex;
+      /* 플렉스 컨테이너 지정 */
+      align-items: center;
+      /* 교차축의 중앙에 배치 */
+    }
+
+    .box {
+      padding: 5px 45px;
+      margin: 5px;
+      background-color: #222;
+      color: white;
+      text-align: center;
+    }
+
+    #as-start {
+      align-self: flex-start;
+      /* 교차축의 시작점에 배치 */
+      background-color: pink;
+      color: black;
+    }
+
+    #as-stretch {
+      align-self: stretch;
+      /* 교차축에 가득 차게 늘림 */
+      background-color: lightgreen;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box" id="as-start">교차축 시작점에 배치</div>
+    <div class="box">menu2</div>
+    <div class="box" id="as-stretch">교차축에 가득 차게 늘림</div>
+    <div class="box">menu4</div>
+  </div>
+
+</body>
+
+</html>
