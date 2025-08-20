@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form name="폼">
+    아이디<input type="text" name="아이디" value="bssm"><br />
+    이름<input type="text" name="이름"><br />
+    <button onclick="함수()">확인</button>
+
+  </form>
+  <script>
+    setTimeout(() => alert("3초후에 실행됩니다."), 3000);
+    function 함수() {
+      let a = 폼.아이디.value;
+      alert("아이디에 입력한 값은" + a);
+    }
+  </script>
+</body>
+
+</html>

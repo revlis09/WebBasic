@@ -1,0 +1,33 @@
+<head>
+  <style>
+    h2 {
+      background-color: lightblue;
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>counter 구현하기</h2>
+  <h4 id="number">0</h4>
+  <div>
+    <button id="inc">+1</button>
+    <button id="dec">-1</button>
+  </div>
+
+  <script>
+    const $number = document.getElementById("number");
+    const $incBtn = document.getElementById("inc");
+    const $decBtn = document.getElementById("dec");
+
+    $incBtn.addEventListener("click", increas);
+    function increas() {
+      const current = parseInt($number.textContent, 10);
+      $number.textContent = current + 1;
+    }
+    $decBtn.addEventListener("click", function (e) { // 클릭 이벤트 리스너에 익명 함수 등록
+      const current = parseInt($number.textContent, 10);
+      console.log(e.target);
+      $number.textContent = current - 1;
+    }); 
+  </script>

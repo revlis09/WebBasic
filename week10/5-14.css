@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  font-size: 16px;
+}
+
+#wrapper {
+  /*문2-1 */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /*2-2 행열개수*/
+  grid-gap: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0px 1px 5px #222;
+}
+
+.card>header {
+  /*2-3 */
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.card>p {
+  /*2-4 */
+  padding: 0.5rem;
+  line-height: 1.6em;
+}
+
+.card>img {
+  /*2-5 */
+  max-width: 100%;
+}

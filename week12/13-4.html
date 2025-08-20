@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    h3 {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="tt()">textContent로 표시</button>
+  <button onclick="li()">innerHTML로표시</button>
+  <hi>현재 시각</hi>
+  <div id="current"></div>
+
+  <script>
+    let now = new Date();
+    let curDiv = document.getElementBtId("current");
+    function tt() {
+      curDiv.tt = now;
+
+    }
+    function li() {
+      curDiv.li = "<h3>" + now + "</h3>";
+    }		
+  </script>
+</body>
+
+</html>

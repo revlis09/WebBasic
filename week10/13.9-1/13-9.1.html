@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+  <style>
+    #container {
+      width: 500px;
+      margin: 20px auto;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      float: left;
+      margin: 50px;
+    }
+
+    /*1.테두리 변환*/
+    #box1 {
+      background-color: lawngreen;
+      border: 1px solid transparent;
+      /* 1px 투명한 테두리 */
+    }
+
+    #box1:hover,
+    #box1:active {
+      /*[문1-1] box1에 마우스를 올릴때만 애니메이션 */
+      animation-name: shape;
+      /* 애니메이션 이름 지정 */
+      animation-duration: 3s;
+      /* [문1-2]애니메이션 실행 시간 3초 */
+      animation-iteration-count: 2;
+      /* 애니메이션 반복횟수 */
+    }
+
+    @keyframes shape {
+
+      /* shape 애니메이션 정의 */
+      from {
+        border: 1px solid transparent;
+        /* 1px 투명한 테두리 */
+      }
+
+      to {
+        border: 1px solid black;
+        /* 검정색 테두리 */
+        border-radius: 50%;
+        /* 테두리를 둥글게 */
+      }
+    }
+
+    /*2.회전 애니메이션 설정 */
+    #box2 {
+      background-color: orchid;
+      border: 1px solid transparent;
+      animation-name: rotate1;
+      /* [문2-1].애니메이션 이름 지정 */
+      animation-duration: 3s;
+      /* [문2-2].애니메이션 실행 시간 */
+      animation-iteration-count: infinite;
+      /* [문2-3]애니메이션 반복시간:무한반복 */
+      animation-delay: 3s;
+      /*[문2-4] 지연시간 3초 동안 기다렸다가 시작 */
+    }
+
+    @keyframes rotate1 {
+
+      /* [문2-5]rotate1 애니메이션 정의 */
+      from {
+        /* [문2-6]처음상태에서 */
+        transform: rotate(0deg);
+        /* 시작은 0도에서 */
+      }
+
+      to {
+        /* [문2-7]완료상태 까지 */
+        transform: rotate(45deg);
+        /* [문2-8]45도까지 회전 */
+      }
+    }
+
+    /* 3. x축 , y축 회전과 배경색 변환*/
+    .box3 {
+      width: 200px;
+      height: 150px;
+      margin: 100px auto;
+      animation:
+        /* [문3-1]애니메이션 한꺼번에 지정*/
+        rotate2 1.5s infinite,
+        /* rotate2 애니메이션 1.5초 실행. 무한 반복  */
+        background 1.5s infinite alternate;
+      /* background :애니메이션 1.5초 동안 실행 무한 반복 번갈아 실행 */
+    }
+
+    /* [문3-2] 애니메이션 정의: 0도 -> x축 -180도 회전 -> y축 -180도 회전 */
+    @keyframes rotate2 {
+      from {
+        /*원근감 있게 ,x축 0도 y축 상태에서 */
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      }
+
+      50% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+      }
+
+      to {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+      }
+    }
+
+    @keyframes background {
+
+      /* [문3-3] 애니메이션 정의 배경색 빨강->초록->파랑 */
+      from {
+        background-color: red;
+      }
+
+      50% {
+        background-color: green
+      }
+
+      to {
+        background-color: blue;
+      }
+    }
+
+    /* 4. 이미지 회전 */
+    #bear-box {
+      width: 200px;
+      margin: 30px auto;
+    }
+
+    img {
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      box-shadow: 5px 5px 30px 2px #000;
+      animation: rotateBear 2.5s infinite 9s;
+      /* rotateBear 애니메이션 2.5초 동안 실행. 무한 반복 지연시간 9초 */
+    }
+
+    @keyframes rotateBear {
+
+      /* [문3-4] 애니메이션 정의  */
+      from {
+        transform: perspective(200px) rotateY(0deg);
+      }
+
+      50% {
+        transform: perspective(200px) rotateY(-180deg);
+      }
+
+      to {
+        transform: perspective(200px) rotateY(-360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="box" id="box1">1.테두리 변환</div>
+    <div class="box" id="box2">2.회전애니메이션</div>
+    <h4 style="clear:left">3.x축 y축 회전 및 배경색 변환</h4>
+    <div class="box box3" id="box3"></div>
+  </div>
+  <div class="box" id="box4">4.이미지 회전
+    <img src="images/bear.jpg">
+  </div>
+
+</body>
+
+</html>
