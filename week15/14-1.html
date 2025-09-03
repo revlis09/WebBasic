@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="demo">연습</h1>
+  <script>
+    function renderApp() {
+      document.getElementById('demo').innerHTML = "안녕하세요";
+    }
+
+    function renderLogin() {
+      document.getElementById('demo').innerHTML = "로그인하세요";
+    }
+    let islogin = true;
+
+    function changeText() {
+      islogin = !islogin;
+      islogin ? renderApp() : renderLogin();
+    }
+  </script>
+  <button onclick="changeText()">change</button>
+</body>
+
+</html>
