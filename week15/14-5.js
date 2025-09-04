@@ -43,4 +43,8 @@ const goods2 = {
   product
 }
 
-console.log(goods2);
+// console.log(goods2);
+
+
+console.log(new Date());
+// const{date, month, year} = dateInfo(new date());
